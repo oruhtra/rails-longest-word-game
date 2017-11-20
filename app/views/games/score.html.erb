@@ -1,0 +1,11 @@
+<div class="text-center">
+  <h1>Results!</h1>
+  <p>
+  <% if @correct %>
+  <%= "#{@answer} is a correct word"  %>
+  <% else %>
+  <%= "#{@answer} is incorrect" %>
+  <% end %>
+  </p>
+  <%= link_to "Play again", new_path, class: "btn btn-primary" %>
+</div>

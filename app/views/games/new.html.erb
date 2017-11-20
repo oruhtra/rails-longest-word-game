@@ -1,0 +1,13 @@
+<div class="flex-grid">
+    <% @grid.each do |letter| %>
+    <p class="text-card"><%= letter %></p>
+    <% end %>
+</div>
+
+<div class="flex">
+  <form action="/score" method="get">
+    <input id="token" name="grid" type="hidden" value=<%= "#{@grid.join}" %>>
+    <input type="text" name="answer" placeholder="type in your answer">
+    <input type="submit" value="Get your score" class="btn btn-danger">
+  </form>
+</div>
